@@ -29,10 +29,12 @@ final class HomeViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        presenter.viewDidLoad()
     }
     
     private func setupUI() {
         title = "Rick & Morty"
+        navigationItem.largeTitleDisplayMode = .always
         view.backgroundColor = .lightGray
         
         view.addSubview(tableView)

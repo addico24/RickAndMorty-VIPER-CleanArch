@@ -15,10 +15,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let winDowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: winDowScene)
-        let testVC = UIViewController()
-        testVC.view.backgroundColor = .red
-        
-        window.rootViewController = testVC
+        let homeVC = HomeFactory.create()
+        let navigationController = UINavigationController(rootViewController: homeVC)
+        navigationController.navigationBar.prefersLargeTitles = true
+        window.rootViewController = navigationController
         self.window = window
         window.makeKeyAndVisible()
     }
