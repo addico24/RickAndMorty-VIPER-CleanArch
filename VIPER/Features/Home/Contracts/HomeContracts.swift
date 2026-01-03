@@ -11,14 +11,14 @@ import Foundation
 protocol HomeViewProtocol: AnyObject {
     func showLoading()
     func hideLoading()
-    func updateView(with characters: [RMCharacter])
+    func updateView(with characterItems: [CharacterViewItem])
     func showError(_ message: String)
 }
 
 @MainActor
 protocol HomePresenterProtocol {
     func viewDidLoad()
-    func didSelect(character: RMCharacter)
+    func didSelect(at index: Int)
 }
 
 @MainActor
