@@ -15,7 +15,7 @@ final class HomeRouter: HomeRouterProtocol {
         self.viewController = viewController
     }
     
-    func navigateToDetail(with character: RMCharacter) {
+    func navigateToDetail(with character: RMCharacterResponse) {
         print("GO Detail")
     }
 }

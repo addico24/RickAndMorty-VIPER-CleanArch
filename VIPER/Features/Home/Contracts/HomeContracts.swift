@@ -23,5 +23,5 @@ protocol HomePresenterProtocol {
 
 @MainActor
 protocol HomeRouterProtocol {
-    func navigateToDetail(with character: RMCharacter)
+    func navigateToDetail(with character: RMCharacterResponse)
 }

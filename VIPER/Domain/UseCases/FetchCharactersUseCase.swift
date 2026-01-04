@@ -8,17 +8,17 @@
 import Foundation
 
 protocol FetchCharactersUseCaseProtocol {
-    func execute() async -> [RMCharacter]
+    func execute() async -> [RMCharacterResponse]
 }
 
 final class MockFetchCharactersUseCase: FetchCharactersUseCaseProtocol {
-    func execute() async -> [RMCharacter] {
+    func execute() async -> [RMCharacterResponse] {
         try? await Task.sleep(nanoseconds: 1 * 1_000_000_000)
         
         return [
-            RMCharacter(id: 1, name: "Rick Sanchez", status: "Alive", image: ""),
-            RMCharacter(id: 2, name: "Morty Smith", status: "Alive", image: ""),
-            RMCharacter(id: 3, name: "Summer Smith", status: "Alive", image: "")
+            RMCharacterResponse(id: 1, name: "Rick Sanchez", status: "Alive", image: ""),
+            RMCharacterResponse(id: 2, name: "Morty Smith", status: "Alive", image: ""),
+            RMCharacterResponse(id: 3, name: "Summer Smith", status: "Alive", image: "")
         ]
     }
 }

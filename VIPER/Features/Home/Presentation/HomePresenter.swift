@@ -13,7 +13,7 @@ final class HomePresenter: HomePresenterProtocol {
     private let useCase: FetchCharactersUseCaseProtocol
     private let router: HomeRouterProtocol
     
-    private var domainCharacters: [RMCharacter] = []
+    private var domainCharacters: [RMCharacterResponse] = []
     
     init(view: HomeViewProtocol, useCase: FetchCharactersUseCaseProtocol, router: HomeRouterProtocol) {
         self.view = view
