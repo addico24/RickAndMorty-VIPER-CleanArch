@@ -7,14 +7,14 @@
 
 import Foundation
 
-protocol IFetchCharactersUseCase {
+protocol FetchCharactersUseCaseProtocol {
     func execute() async throws -> [RMCharacterResponse]
 }
 
-final class FetchCharactersUseCase: IFetchCharactersUseCase {
-    private let repository: RemoteCharacterRepository
+final class FetchCharactersUseCase: FetchCharactersUseCaseProtocol {
+    private let repository: CharacterRepositoryProtocol
     
-    init(repository: RemoteCharacterRepository) {
+    init(repository: CharacterRepositoryProtocol) {
         self.repository = repository
     }
     

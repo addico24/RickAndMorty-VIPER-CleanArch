@@ -10,12 +10,12 @@ import Foundation
 @MainActor
 final class HomePresenter: HomePresenterProtocol {
     private weak var view: HomeViewProtocol?
-    private let useCase: IFetchCharactersUseCase
+    private let useCase: FetchCharactersUseCaseProtocol
     private let router: HomeRouterProtocol
     
     private var domainCharacters: [RMCharacterResponse] = []
     
-    init(view: HomeViewProtocol, useCase: IFetchCharactersUseCase, router: HomeRouterProtocol) {
+    init(view: HomeViewProtocol, useCase: FetchCharactersUseCaseProtocol, router: HomeRouterProtocol) {
         self.view = view
         self.useCase = useCase
         self.router = router

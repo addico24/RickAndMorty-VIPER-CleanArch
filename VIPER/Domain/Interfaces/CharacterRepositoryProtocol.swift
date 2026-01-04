@@ -1,5 +1,5 @@
 //
-//  ICharacterRepository.swift
+//  CharacterRepositoryProtocol.swift
 //  VIPER
 //
 //  Created by rico on 4.01.2026.
