@@ -16,6 +16,7 @@ final class HomeRouter: HomeRouterProtocol {
     }
     
     func navigateToDetail(with character: RMCharacterResponse) {
-        print("GO Detail")
+        let detailVC = DetailFactory.create(withId: character.id)
+        viewController?.navigationController?.pushViewController(detailVC, animated: true)
     }
 }

@@ -30,6 +30,7 @@ final class HomePresenter: HomePresenterProtocol {
         let selectedCharacter = domainCharacters[index]
         
         print("Selected: \(selectedCharacter.name ?? "")")
+        router.navigateToDetail(with: selectedCharacter)
     }
 }
 

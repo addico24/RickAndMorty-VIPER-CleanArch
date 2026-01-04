@@ -9,12 +9,11 @@ import UIKit
 
 @MainActor
 final class HomeFactory {
-    
     static func create() -> UIViewController {
         let view = HomeViewController()
         let router = HomeRouter(viewController: view)
         let networkClient = AlamofireNetworkClient()
-        let repository = CharacterRepository(client: networkClient)
+        let repository = RemoteCharacterRepository(client: networkClient)
         let useCase = FetchCharactersUseCase(repository: repository)
         let presenter = HomePresenter(view: view,
                                       useCase: useCase,

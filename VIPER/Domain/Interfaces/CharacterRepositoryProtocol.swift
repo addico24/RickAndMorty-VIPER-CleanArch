@@ -7,6 +7,7 @@
 
 import Foundation
 
-protocol ICharacterRepository {
+protocol CharacterRepositoryProtocol {
     func fetchCharacters() async throws -> [RMCharacterResponse]
+    func fetchCharacterDetail(id: Int) async throws -> RMCharacterResponse
 }

@@ -14,4 +14,11 @@ enum RickAndMortyAPI {
             method: .get
         )
     }
+    
+    static func getCharacterDetail(id: Int) -> Endpoint<RMCharacterResponse> {
+        return Endpoint(
+            path: "character/\(id)",
+            method: .get
+        )
+    }
 }

@@ -12,9 +12,9 @@ protocol IFetchCharactersUseCase {
 }
 
 final class FetchCharactersUseCase: IFetchCharactersUseCase {
-    private let repository: CharacterRepository
+    private let repository: RemoteCharacterRepository
     
-    init(repository: CharacterRepository) {
+    init(repository: RemoteCharacterRepository) {
         self.repository = repository
     }
     
