@@ -7,18 +7,18 @@
 
 import Foundation
 
-protocol FetchCharactersUseCaseProtocol {
-    func execute() async -> [RMCharacterResponse]
+protocol IFetchCharactersUseCase {
+    func execute() async throws -> [RMCharacterResponse]
 }
 
-final class MockFetchCharactersUseCase: FetchCharactersUseCaseProtocol {
-    func execute() async -> [RMCharacterResponse] {
-        try? await Task.sleep(nanoseconds: 1 * 1_000_000_000)
-        
-        return [
-            RMCharacterResponse(id: 1, name: "Rick Sanchez", status: "Alive", image: ""),
-            RMCharacterResponse(id: 2, name: "Morty Smith", status: "Alive", image: ""),
-            RMCharacterResponse(id: 3, name: "Summer Smith", status: "Alive", image: "")
-        ]
+final class FetchCharactersUseCase: IFetchCharactersUseCase {
+    private let repository: CharacterRepository
+    
+    init(repository: CharacterRepository) {
+        self.repository = repository
+    }
+    
+    func execute() async throws -> [RMCharacterResponse] {
+        return try await repository.fetchCharacters()
     }
 }
